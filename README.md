@@ -1,1 +1,1 @@
-# Meeting-Scheduler-System
+# Meeting-Management-System
