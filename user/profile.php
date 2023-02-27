@@ -157,6 +157,8 @@ if(isset($_POST['submit']))
 					 <a href="meeting_list.php"><button class="btn btn-default" type="button">Meeting List</button></a>
 					
 					<a href="edit_agenda.php"><button class="btn btn-default" type="button">Agendas</button></a> 
+	  
+	  				<a href="graph.php"><button class="btn btn-default" type="button">Graph</button></a> 
 					
 								   </div>
  
