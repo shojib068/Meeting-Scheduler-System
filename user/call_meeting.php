@@ -32,6 +32,7 @@ include "connection.php";
     $sql = "INSERT INTO call_meeting (id,title, 
 date, time, place, description, email)
     VALUES ('','$title', '$date', '$time', '$place', '$description','$user_email')";
+   $sql2 = "UPDATE type SET amount = amount + 1 WHERE type_name = '$title'";
     
            if (mysqli_query($db, $sql)) 
            {
@@ -45,7 +46,17 @@ date, time, place, description, email)
              echo "Error: " . $sql . "<br>" . mysqli_error($db);
             }
 
-
+          if (mysqli_query($db, $sql2)) 
+           {
+           
+               header("Location: add_agenda.php");
+               echo "New record created successfully";
+    
+           }
+            else
+             {
+             echo "Error: " . $sql . "<br>" . mysqli_error($db);
+            }
           }
 
 ?>
